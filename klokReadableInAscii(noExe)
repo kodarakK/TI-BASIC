@@ -1,0 +1,86 @@
+"clear the screen
+ClrDraw
+
+"draw the outer circle
+Circle(0,0,50,10)
+
+"dots per second / 5 seconds
+For(I,0,360,6)
+Pt-On(cos(I°)*45,sin(I°)*45,1,BLACK)
+End
+
+For(I,0,360,30)
+Pt-On(cos(I°)*45,sin(I°)*45,3,MAGENTA)
+End
+
+"set standard values
+90→X
+90→Y
+90→C
+90→A
+90→R
+90→D
+0→S
+0→T
+
+"get the time + put it in certain variable
+getTime→L₁
+
+"seconds
+L₁(3)→G
+X-(6*G)→X
+Y-(6*G)→Y
+S+G→S
+
+"minutes
+L₁(2)→P
+C-(6*P)→C
+A-(6*P)→A
+T+P→T
+
+"hours
+L₁(1)→O
+R-(30*O)→R
+D-(30*O)→D
+
+While 1 
+"s wijzer
+Line(0,0,cos((X+6)°)*40,sin((Y+6)°)*40,0)
+Line(0,0,cos(X°)*40,sin(Y°)*40,1,RED)
+
+"m wijzer
+Line(0,0,cos((C+6)°)*40,sin((A+6)°)*40,0)
+Line(0,0,cos(C°)*40,sin(A°)*40,1,MEDGRAY)
+
+"u wijzer
+Line(0,0,cos((R+30)°)*20,sin((D+30)°)*20,0)
+Line(0,0,cos(R°)*20,sin(D°)*20,1,BLACK)
+
+"middenpunt
+Pt-On(0,0,3,BLACK)
+
+"reset std values
+90→X
+90→Y
+90→C
+90→A
+90→R
+90→D
+
+"put time in vars
+getTime→L₁
+L₁(3)→G
+X-(6*G)→X
+Y-(6*G)→Y
+S+G→S
+
+L₁(2)→P
+C-(6*P)→C
+A-(6*P)→A
+T+P→T
+
+L₁(1)→O
+R-(30*O)→R
+D-(30*O)→D
+
+End
