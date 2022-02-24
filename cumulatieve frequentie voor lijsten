@@ -1,10 +1,10 @@
-0->dim(L5)
-0->dim(L6)
-Disp "WELKE LIJST?: "
-Prompt L5
-L5(1)->L6(1)
-For(I,2,dim(L5)
-L5(I)+L6(I-1)->L6(1+dim(L6))
+0→dim(L₅)
+0→dim(L6)
+Disp "welke lijst?: "
+Prompt L₅
+L₅(1)→L₆(1)
+For(I,2,dim(L₅)
+L₅(I)+L₆(I-1)→L₆(1+dim(L₆))
 End
-Disp L5
-Disp L6
+Disp L₅
+Disp L₆
