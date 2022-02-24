@@ -1,0 +1,10 @@
+0->dim(L5)
+0->dim(L6)
+Disp "WELKE LIJST?: "
+Prompt L5
+L5(1)->L6(1)
+For(I,2,dim(L5)
+L5(I)+L6(I-1)->L6(1+dim(L6))
+End
+Disp L5
+Disp L6
