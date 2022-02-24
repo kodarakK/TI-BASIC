@@ -1,5 +1,5 @@
 0→dim(L₅)
-0→dim(L6)
+0→dim(L₆)
 Disp "welke lijst?: "
 Prompt L₅
 L₅(1)→L₆(1)
